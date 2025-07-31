@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            font-family: monospace;
+            background-image: url(images/img2.webp);
+              background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+             
+        }
+
+
+        .ff{
+            height: 500px;
+        background-color: rgba(255, 62, 62,  0.7);
+            width: 425px; 
+            display: flex;
+            
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0px 0px 4px yellow;
+
+        }
+        #name,#age,#password,#email{
+          display: block;
+          padding: 15px;
+          border-radius: 30px;
+          margin-bottom: 10px;
+          width: 290px;
+          border: none; 
+          transition: all 0.5s ease;
+
+}
+
+ #name:hover,#age:hover,#password:hover,#email:hover{
+    transform: scale(1.1 );
+    box-shadow: 0px 0px 4px #231c37;
+ }
+
+
+
+
+        .hh{
+            font-weight: bolder;
+            font-size: 24px;
+            color: yellow;
+            margin-bottom: 50px;
+        }
+
+
+
+        .bt{
+            background-color: yellow;
+        margin-top: 20px;
+        font-weight: bolder;
+        padding: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 4px grey;
+        text-decoration: none;
+        font-size: 18px;
+        transition: all 0.5s ease;
+        }
+
+        .bt:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 4px #231c37;
+        }
+
+        #ffd{
+            text-decoration: none;
+            font-weight: bolder;
+            color: black;
+        }
+
+
+        .log{
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #llg{
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="ff">
+        <form action="submit">
+            <div class="hh">
+                <h2>Register</h2>
+            </div>
+
+            <div class="main">
+                <input type="text" placeholder="Name" id="name" required>
+                <input type="email" placeholder="Email"  id="email" name="email" required>
+                <input type="number" id="age" placeholder="Age" required>
+                <input type="password" id="password" placeholder="password" required>
+            </div>
+
+            <div class="bt">
+                <a href="homepage.html" id="ffd">Register</a>
+            </div>
+            <div class="log">
+                <a id="llg" href="index.html">Already have an account ?</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html> 

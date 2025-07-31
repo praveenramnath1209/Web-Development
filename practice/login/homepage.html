@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            background-image: url(images/booking_background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .con{
+            padding: 20px;
+            background-color:	#d4f1f4;
+
+            height: 450px;
+            width: 600px;
+            border-radius: 40px;
+            text-align: center;
+            box-shadow: 0px 0px 8px grey
+
+        }
+
+        .train,.bus,.event,.movie{
+            display: block;
+            margin-top: 10px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 97%;
+            font-size: 24px;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: all 0.5s ease;
+            color: black;
+
+            
+        }
+
+.train, .bus, .movie, .event {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    backdrop-filter: blur(6px);
+}
+
+
+
+
+        .train:hover,.bus:hover,.event:hover,.movie:hover{
+            transform: scale(1.1);
+            box-shadow: 0px 0px 8px grey
+
+        }
+
+
+
+
+        .train{
+            margin-top: 50px;
+        }
+
+        .hh{
+            margin-top: 40px;
+            margin-bottom: 10px;
+            
+        }
+
+        .he{
+            font-weight: bolder;
+            font-size: 40px;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="con">
+        <div class="hh">
+            <h1 class="he">
+                Ticket Booking Platform
+            </h1>
+        </div>
+
+        <div class="options">
+            <a  class="train" href="train.html" target="_blank">Train</a>
+            <a class="bus"   href="bus.html" target="_blank">Bus</a>
+            <a class="movie"  href="movie.html" target="_blank">Movie</a>
+            <a class="event"  href="event.html" target="_blank">Event</a>
+        </div>
+    </div>
+</body>
+</html>

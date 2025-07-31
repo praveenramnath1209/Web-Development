@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        #c1{
+            height: 400px;
+             background-color: rgba(255, 255, 255,0.6);
+             width: 400px;
+             border-radius: 25px;
+             box-shadow: 0px 0px 8px rgb(96, 209, 68);
+             text-align: center;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(images/mountains-firewatch-green-forest-wallpaper-preview.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        #title{
+            color: rgb(0, 0, 0);
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        #username{
+            padding: 15px;
+            margin-bottom: 10px;
+            border: 2px , solid, rgb(96, 209, 68);
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        #password{
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 2px , solid, rgb(96, 209, 68);
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+        }
+
+        #bt{
+            padding: 8px;
+            width: 320px;
+            border: 2px , solid, rgb(96, 209, 68);
+            border-radius: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            background-color: rgb(96, 209, 68);
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            
+        }   
+
+        #bt:hover{
+            background-color: rgb(87, 189, 61);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
+        #username:hover{
+            transform: scale(1.1);
+        }
+
+        #password:hover{
+            transform: scale(1.1);
+        }
+        
+        #b3{
+            font-size: 12px;
+        }
+
+        #reg:hover{
+            color: black;
+        }
+
+    </style>
+</head>
+
+
+<body>
+    <div id="c1">
+        <form action="homepage.html">
+            <h3 id="title">Login Form</h3>
+
+            <div id="b1">
+            <input  type="text" placeholder="Username" id="username" required ><br>
+            <input type="password" placeholder="Password" id="password" required><br>
+            </div>
+
+            <div id="b2">
+            <button id="bt" type="submit"  >Login</button><br>
+            </div>
+
+            <div id="b3">
+                <a id="reg" href="register.html">Dont have an account? Register here </a>
+            </div>
+            
+        </form>
+    </div>
+
+    
+</body>
+</html>
