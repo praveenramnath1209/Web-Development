@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laptop</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background-color: #000000;
+        color: white;
+        padding: 30px 0;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      h2 {
+        margin-top: 40px;
+        color: #222;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      center {
+        padding: 20px;
+      }
+
+      /* Styling for product cards only */
+      .product-table {
+        margin: 20px auto;
+        border-collapse: separate;
+        border-spacing: 30px 20px;
+      }
+
+      .product-td {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .product-td:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+
+      h5 {
+        margin: 8px 0;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 15px;
+        border: none;
+        background-color: #000000;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #000000;
+      }
+
+      audio,
+      video {
+        margin: 20px 0;
+        border-radius: 8px;
+      }
+
+      #map-container {
+        margin-top: 10px;
+      }
+
+      iframe {
+        border: 2px solid #ccc;
+        border-radius: 8px;
+      }
+
+      input[type="submit"] {
+        background-color: #000000;
+        color: white;
+        padding: 10px 18px;
+        font-size: 15px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #000000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Laptop Category</h1>
+      <p>Here you can buy laptops!</p>
+    </header>
+
+    <center>
+      <table class="product-table">
+        <tr>
+          <td class="product-td" align="center">
+            <img
+              src="lp.jpg"
+              alt="laptop1"
+              height="200px"
+              width="300px"
+              draggable="true"
+            /><br />
+            <h5>Asus</h5>
+            <h5>₹65,000</h5>
+            <button>Buy Now</button>
+          </td>
+          <td class="product-td" align="center">
+            <img
+              src="lp2.jpg"
+              alt="laptop2"
+              height="200px"
+              width="300px"
+              draggable="true"
+            /><br />
+            <h5>HP</h5>
+            <h5>₹75,000</h5>
+            <button>Buy Now</button>
+          </td>
+          <td class="product-td" align="center">
+            <img
+              src="lp3.jpg"
+              alt="laptop3"
+              height="200px"
+              width="300px"
+              draggable="true"
+            /><br />
+            <h5>Acer</h5>
+            <h5>₹1,00,000</h5>
+            <button>Buy Now</button>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Product Sound</h2>
+      <audio controls>
+        <source src="sound.mp3" type="audio/mpeg" />
+      </audio>
+
+      <h2>Product Demo Video</h2>
+      <video width="400" height="300" controls>
+        <source src="demo.mp4" type="video/mp4" />
+      </video>
+
+      <h2>Find Nearest Shop</h2>
+      <button onclick="getLocation()">Show My Location</button>
+      <div id="map-container">
+        <iframe
+          id="map"
+          width="400"
+          height="300"
+          style="display: none"
+        ></iframe>
+      </div>
+
+      <h2>Product Form</h2>
+      <form>
+        <table border="1" cellpadding="8" cellspacing="0">
+          <tr>
+            <td>Product Name:</td>
+            <td><input type="text" name="productname" /></td>
+          </tr>
+          <tr>
+            <td>Price:</td>
+            <td><input type="text" name="price" /></td>
+          </tr>
+          <tr>
+            <td>Brand:</td>
+            <td>
+              <select name="brand">
+                <option>Asus</option>
+                <option>HP</option>
+                <option>Acer</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Delivery Option:</td>
+            <td>
+              <input type="radio" name="delivery" /> Yes
+              <input type="radio" name="delivery" /> No
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showMap, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function showMap(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const iframe = document.getElementById("map");
+        iframe.src =
+          "https://www.google.com/maps?q=computer+shop+near+" +
+          lat +
+          "," +
+          lon +
+          "&output=embed";
+        iframe.style.display = "block";
+      }
+
+      function showError(error) {
+        alert("Unable to retrieve location.");
+      }
+    </script>
+  </body>
+</html>

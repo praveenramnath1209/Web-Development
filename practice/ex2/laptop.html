@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Laptop</title>
+  </head>
+  <body>
+    <center>
+      <h1>Laptop Category</h1>
+      <p>Here you can buy laptops!</p>
+
+      <table>
+        <tr>
+          <td align="center">
+            <img
+              src="lp.jpg"
+              alt="laptop1"
+              height="200px"
+              width="300px"
+              draggable="true"
+            /><br />
+            <h5>Asus</h5>
+            <h5>₹65,000</h5>
+            <button>Buy Now</button>
+          </td>
+          <td align="center">
+            <img
+              src="lp2.jpg"
+              alt="laptop2"
+              height="200px"
+              width="300px"
+              draggable="true"
+            /><br />
+            <h5>HP</h5>
+            <h5>₹75,000</h5>
+            <button>Buy Now</button>
+          </td>
+          <td align="center">
+            <img
+              src="lp3.jpg"
+              alt="laptop3"
+              height="200px"
+              width="300px"
+              draggable="true"
+            /><br />
+            <h5>Acer</h5>
+            <h5>₹1,00,000</h5>
+            <button>Buy Now</button>
+          </td>
+        </tr>
+      </table>
+
+      <h2>Product Sound</h2>
+      <audio controls>
+        <source src="sound.mp3" type="audio/mpeg" />
+      </audio>
+
+      <h2>Product Demo Video</h2>
+      <video width="400" height="300" controls>
+        <source src="demo.mp4" type="video/mp4" />
+      </video>
+
+      <h2>Find Nearest Shop</h2>
+      <button onclick="getLocation()">Show My Location</button>
+      <div id="map-container" style="margin-top: 10px">
+        <iframe
+          id="map"
+          width="400"
+          height="300"
+          style="display: none"
+        ></iframe>
+      </div>
+
+      <h2>Product Form</h2>
+      <form>
+        <table border="1" cellpadding="5" cellspacing="0">
+          <tr>
+            <td>Product Name:</td>
+            <td><input type="text" name="productname" /></td>
+          </tr>
+          <tr>
+            <td>Price:</td>
+            <td><input type="text" name="price" /></td>
+          </tr>
+          <tr>
+            <td>Brand:</td>
+            <td>
+              <select name="brand">
+                <option>Asus</option>
+                <option>HP</option>
+                <option>Acer</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Delivery Option:</td>
+            <td>
+              <input type="radio" name="delivery" /> Yes
+              <input type="radio" name="delivery" /> No
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </center>
+
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showMap, showError);
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function showMap(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const iframe = document.getElementById("map");
+        iframe.src =
+          "https://www.google.com/maps?q=computer+shop+near+" +
+          lat +
+          "," +
+          lon +
+          "&output=embed";
+        iframe.style.display = "block";
+      }
+
+      function showError(error) {
+        alert("Unable to retrieve location.");
+      }
+    </script>
+  </body>
+</html>

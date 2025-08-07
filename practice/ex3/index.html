@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shopping</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+
+      main {
+        max-width: 900px;
+        margin: 30px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h2 {
+        color: #4caf50;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+
+      img {
+        border: 3px solid #ccc;
+        border-radius: 10px;
+      }
+
+      map area {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Online Shopping</h1>
+    </header>
+
+    <main>
+      <h2>Product Categories - Click on Items</h2>
+      <img src="workplace.png" alt="Workplace" usemap="#workmap" width="800" />
+
+      <map name="workmap">
+        <area
+          shape="rect"
+          coords="100,180,370,450"
+          alt="Laptop"
+          href="laptop.html"
+        />
+        <area
+          shape="rect"
+          coords="500,100,580,200"
+          alt="Phone"
+          href="phone.html"
+        />
+        <area
+          shape="rect"
+          coords="630,120,730,200"
+          alt="Mouse"
+          href="mouse.html"
+        />
+        <area
+          shape="rect"
+          coords="350,460,520,610"
+          alt="Notebook"
+          href="notebook.html"
+        />
+        <area
+          shape="circle"
+          coords="700,540,50"
+          alt="Coffee"
+          href="coffee.html"
+        />
+      </map>
+    </main>
+  </body>
+</html>
