@@ -1,0 +1,57 @@
+h2{
+    color: brown;
+}
+
+h3{
+    color: blueviolet;
+}
+
+.df{
+    text-decoration: none;
+}
+
+.ul{
+    text-decoration: underline;
+}
+
+.ol{
+    text-decoration: overline;
+}
+
+.lt{
+    text-decoration: line-through;
+}
+
+.ulc{
+    text-decoration: underline blue;
+}
+
+.olc{
+    text-decoration: overline blue;
+}
+
+.ltc{
+    text-decoration: line-through greenyellow;
+}
+
+
+.dfs{
+    text-decoration: underline red solid;
+}
+
+
+.uls{
+    text-decoration: underline red  dotted;
+}
+
+.ols{
+    text-decoration: overline red double;
+}
+
+.lts{
+    text-decoration: line-through red dashed; 
+}
+
+.wv{
+    text-decoration: underline black wavy;
+}
