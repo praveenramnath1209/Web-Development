@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+
+    
+
+</head>
+<body>
+    <center>
+    <div>
+        <h2>User Registration Form</h2>
+        <form name="registrationForm" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="creditCard">Credit Card Number:</label></td>
+                    <td><input type="text" id="creditCard" name="creditCard" required></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit">Register</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </center>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var phone = document.getElementById("phone").value;
+            var creditCard = document.getElementById("creditCard").value;
+            
+            // Email validation
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address");
+                return false;
+            }
+            
+            // Password validation
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+            
+            // Phone validation (10 digits)
+            var phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone.replace(/\D/g, ''))) {
+                alert("Please enter a valid 10-digit phone number");
+                return false;
+            }
+            
+            // Credit card validation (16 digits)
+            var cardPattern = /^[0-9]{16}$/;
+            if (!cardPattern.test(creditCard.replace(/\s/g, ''))) {
+                alert("Please enter a valid 16-digit credit card number");
+                return false;
+            }
+            
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</body>
+</html>
