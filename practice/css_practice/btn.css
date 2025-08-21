@@ -1,0 +1,24 @@
+.btn {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Poppins, sans-serif;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: black;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: yellow;
+  color: black;
+}
+
+.btn-shadows {
+  background-color: aqua;
+  box-shadow: black 2px 2px;
+}
