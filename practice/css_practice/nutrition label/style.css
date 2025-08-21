@@ -1,0 +1,52 @@
+body {
+  font-family: Poppins, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.15px;
+}
+
+.label {
+  border: 2px solid black;
+  width: 260px;
+}
+
+h1 {
+  margin: 2px;
+}
+
+p {
+  text-align: left;
+  margin: 0px 4px 0px 4px;
+}
+
+/* Commonly used */
+.bold {
+  font-weight: 800;
+}
+
+.divider {
+  border-bottom: 1px solid rgb(121, 121, 121);
+  margin: 0px 4px 0px 4px;
+}
+
+.dividerb {
+  border-bottom: 8px solid rgb(0, 0, 0);
+  margin: 0px 4px 0px 4px;
+}
+
+.dividerc {
+  border-bottom: 4px solid rgb(0, 0, 0);
+  margin: 0px 4px 0px 4px;
+}
+
+.space {
+  margin-right: 5px; /* Adjust spacing */
+}
+
+.right {
+  text-align: right;
+}
