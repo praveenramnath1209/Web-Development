@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="Name" required /><br /><br />
+
+      <label for="age">Age:</label><br />
+      <input
+        type="number"
+        id="age"
+        name="Age"
+        min="1"
+        max="100"
+        required
+      /><br /><br />
+
+      <label for="num">Phone No:</label><br />
+      <input
+        type="tel"
+        id="num"
+        name="PhoneNumber"
+        pattern="[0-9]{10}"
+        placeholder="Enter 10-digit number"
+        required
+      /><br /><br />
+
+      <label for="em">Email:</label><br />
+      <input type="email" id="em" name="Email" required /><br /><br />
+
+      <p>Gender:</p>
+      <label
+        ><input type="radio" name="gender" value="Male" required /> Male</label
+      ><br />
+      <label><input type="radio" name="gender" value="Female" /> Female</label
+      ><br />
+      <label><input type="radio" name="gender" value="Other" /> Other</label
+      ><br /><br />
+
+      <label for="course">Course: </label><br />
+      <select name="Course" id="course" required>
+        <option value="" disabled selected>-- Select a course --</option>
+        <option value="java">Java Fullstack</option>
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="flutter">Flutter</option>
+        <option value="cloud">Cloud and DevOps</option>
+        <option value="ml">Machine Learning</option></select
+      ><br /><br />
+
+      <label>
+        <input type="checkbox" id="chk" name="terms" required /> I have read the
+        terms and conditions </label
+      ><br /><br />
+
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

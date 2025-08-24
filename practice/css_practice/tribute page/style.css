@@ -1,0 +1,47 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 20px;
+  background-color: rgb(255, 246, 225);
+}
+
+.heading {
+  text-align: center;
+  background-color: #a7a7a7;
+}
+
+.img-div {
+  height: auto;
+  width: 100%;
+}
+
+figure {
+  text-align: center; /* Center the image and caption */
+  margin: 20px auto; /* Add space around the figure */
+  padding: 10px; /* Inner spacing inside figure */
+  border: 2px solid #ccc; /* Optional border */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background */
+  max-width: 800px; /* Keep figure size controlled */
+}
+
+figure img {
+  width: 100%; /* Make image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for image */
+}
+
+figcaption {
+  margin-top: 8px; /* Space above caption */
+  font-size: 14px;
+  color: #555; /* Grey caption text */
+  font-style: italic;
+}
