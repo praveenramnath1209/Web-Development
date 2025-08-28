@@ -1,0 +1,64 @@
+* {
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -1px;
+  height: 100vh;
+}
+
+h1 {
+  font-weight: 800;
+  text-align: center;
+}
+
+form {
+  background-color: rgb(247, 232, 214);
+  margin-top: 75px;
+  font-size: 20px;
+  border-radius: 30px;
+  width: 35%;
+  margin-bottom: 75px;
+}
+
+form * {
+  margin-left: 20px;
+}
+
+label {
+  font-weight: 700;
+}
+
+form p {
+  font-weight: 700;
+}
+
+#name,
+#age,
+#num,
+#em,
+#course {
+  width: 80%;
+  border: 0.5px solid grey;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+#sub {
+  display: block;
+  margin: 20px auto; /* top-bottom 20px, left-right auto */
+  color: #fff;
+  background-color: rgb(42, 196, 42);
+  border: none;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  font-weight: 900;
+  font-size: 18px;
+  cursor: pointer;
+}
