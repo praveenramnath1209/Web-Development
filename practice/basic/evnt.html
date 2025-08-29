@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Handling Example</title>
+  </head>
+  <body>
+    <button id="btn">Click Me</button><br /><br />
+
+    <input type="text" id="txt" placeholder="Type here" /><br /><br />
+
+    <select id="dropdown">
+      <option value="A">Option A</option>
+      <option value="B">Option B</option></select
+    ><br /><br />
+
+    <p id="hover">Hover over me!</p>
+
+    <script>
+      // Click
+      document.getElementById("btn").addEventListener("click", function () {
+        alert("Button clicked!");
+      });
+
+      // Focus
+      document.getElementById("txt").addEventListener("focus", function () {
+        this.style.background = "lightyellow";
+      });
+
+      // Blur
+      document.getElementById("txt").addEventListener("blur", function () {
+        this.style.background = "";
+      });
+
+      // Change
+      document
+        .getElementById("dropdown")
+        .addEventListener("change", function () {
+          alert("You selected: " + this.value);
+        });
+
+      // Keypress
+      document.getElementById("txt").addEventListener("keypress", function (e) {
+        console.log("Key pressed: " + e.key);
+      });
+
+      // Mouseover
+      document
+        .getElementById("hover")
+        .addEventListener("mouseover", function () {
+          this.style.color = "red";
+        });
+    </script>
+  </body>
+</html>
