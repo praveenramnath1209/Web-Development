@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Example</title>
+    <style>
+      /* Background image + color */
+      body {
+        background-image: url("background.jpg");
+        background-size: cover; /* make image cover full page */
+        background-repeat: no-repeat;
+        background-color: lightblue; /* fallback color */
+        font-family: Arial, sans-serif; /* font */
+        text-align: center; /* alignment */
+        color: darkblue; /* font color */
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-top: 20px;
+      }
+
+      /* Pseudo selector example */
+      a:hover {
+        color: red;
+        text-decoration: underline;
+      }
+
+      /* Table styling */
+      table {
+        width: 60%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #f9f9f9; /* table background */
+      }
+
+      th {
+        background-color: #333; /* table header background */
+        color: white; /* table header text color */
+        padding: 10px;
+      }
+
+      td {
+        border: 1px solid #666;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #eee; /* zebra effect */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My CSS Webpage</h1>
+    <p>Welcome to my styled webpage!</p>
+    <p>Visit <a href="#">this link</a> to see hover effect.</p>
+
+    <h2>Sample Table</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Course</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>Praveen</td>
+        <td>Web Development</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>Ram</td>
+        <td>Java Programming</td>
+        <td>90</td>
+      </tr>
+      <tr>
+        <td>Arun</td>
+        <td>Python</td>
+        <td>88</td>
+      </tr>
+    </table>
+  </body>
+</html>
